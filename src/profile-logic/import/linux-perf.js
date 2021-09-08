@@ -83,13 +83,17 @@ export function convertPerfScriptProfile(
     }
 
     const frameMap = new Map();
-    function getOrCreateFrame(frameString) {
+    function getOrCreateFrame(frameString: string) {
       let frame = frameMap.get(frameString);
       if (frame === undefined) {
         frame = frameTable.data.length;
         const stringIndex = stringTable.length;
         stringTable.push(frameString);
-        frameTable.data.push([stringIndex]);
+        let category = 0;
+        if (frameString.includes("kallsyms")) {
+          category = 1;
+        }
+        frameTable.data.push([stringIndex, 0, 0, 0, category]);
         frameMap.set(frameString, frame);
       }
       return frame;
@@ -262,11 +266,15 @@ export function convertPerfScriptProfile(
     meta: {
       interval: 1,
       processType: 0,
-      product: 'Firefox',
+      product: 'Linux Perf',
       stackwalk: 1,
       startTime: startTime,
       version: 4,
       presymbolicated: true,
+      categories: [
+        {name: "User", color: "yellow"},
+        {name: "Kernel", color: "red"},
+      ]
     },
     libs: [],
     threads: threadArray,

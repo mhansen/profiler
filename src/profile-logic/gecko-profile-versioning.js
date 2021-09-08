@@ -482,6 +482,7 @@ const _upgraders = {
       [1 << 12 /* EVENTS */]: 1 /* Other */,
     };
     function convertToVersionElevenRecursive(p) {
+      if (p.meta.categories) return;
       p.meta.categories = categories;
       for (const thread of p.threads) {
         const schemaIndexCategory = thread.frameTable.schema.category;
