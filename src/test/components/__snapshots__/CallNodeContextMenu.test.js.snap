@@ -215,6 +215,14 @@ exports[`calltree/CallNodeContextMenu basic rendering renders a full context men
     role="menuitem"
     tabindex="-1"
   >
+    Look up the function name in Code search
+  </div>
+  <div
+    aria-disabled="false"
+    class="react-contextmenu-item"
+    role="menuitem"
+    tabindex="-1"
+  >
     Copy function name
   </div>
   <div

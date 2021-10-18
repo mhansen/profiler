@@ -138,6 +138,14 @@ class CallNodeContextMenuImpl extends React.PureComponent<Props> {
     );
   }
 
+  lookupFunctionOnCodeSearch(): void {
+    const name = this._getFunctionName();
+    window.open(
+      `https://cs.android.com/search?q=${encodeURIComponent(name)}`,
+      '_blank'
+    );
+  }
+
   copyFunctionName(): void {
     copy(this._getFunctionName());
   }
@@ -205,6 +213,9 @@ class CallNodeContextMenuImpl extends React.PureComponent<Props> {
     switch (type) {
       case 'searchfox':
         this.lookupFunctionOnSearchfox();
+        break;
+      case 'cs':
+        this.lookupFunctionOnCodeSearch();
         break;
       case 'copy-function-name':
         this.copyFunctionName();
@@ -599,6 +610,9 @@ class CallNodeContextMenuImpl extends React.PureComponent<Props> {
             Look up the function name on Searchfox
           </MenuItem>
         </Localized>
+        <MenuItem onClick={this._handleClick} data={{ type: 'cs' }}>
+          Look up the function name in Code search
+        </MenuItem>
         <Localized id="CallNodeContextMenu--copy-function-name">
           <MenuItem
             onClick={this._handleClick}
