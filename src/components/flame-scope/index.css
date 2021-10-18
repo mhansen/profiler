@@ -2,14 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.stackChart {
+.flameScope {
   display: flex;
   overflow: hidden;
   flex: 1;
   flex-flow: column;
 }
 
-.stackChartContent {
+.flameScopeContent {
   display: flex;
   flex: 1;
   border-top: 1px solid var(--grey-30);

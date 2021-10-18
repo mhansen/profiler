@@ -184,7 +184,7 @@ class FlameScopeImpl extends React.PureComponent<Props> {
 
     return (
       <div
-        className="stackChart"
+        className="flameScope"
         id="stack-chart-tab"
         role="tabpanel"
         aria-labelledby="stack-chart-tab-button"
@@ -194,7 +194,7 @@ class FlameScopeImpl extends React.PureComponent<Props> {
         <StackSettings />
         <TransformNavigator />
         {maxStackDepth === 0 && userTimings.length === 0 ? (
-          <StackChartEmptyReasons />
+          <FlameScopeEmptyReasons />
         ) : (
           <ContextMenuTrigger
             id="CallNodeContextMenu"
@@ -202,7 +202,7 @@ class FlameScopeImpl extends React.PureComponent<Props> {
               className: 'treeViewContextMenu',
             }}
           >
-            <div className="stackChartContent">
+            <div className="flameScopeChartContent">
               <FlameScopeCanvas
                 viewportProps={{
                   previewSelection,

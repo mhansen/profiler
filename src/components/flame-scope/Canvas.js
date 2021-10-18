@@ -545,7 +545,7 @@ class FlameScopeCanvasImpl extends React.PureComponent<Props> {
     return (
       <ChartCanvas
         scaleCtxToCssPixels={false}
-        className="stackChartCanvas"
+        className="flameScopeCanvas"
         containerWidth={containerWidth}
         containerHeight={containerHeight}
         isDragging={isDragging}
