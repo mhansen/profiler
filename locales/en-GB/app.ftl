@@ -565,6 +565,7 @@ TabBar--flame-graph-tab = Flame Graph
 TabBar--stack-chart-tab = Stack Chart
 TabBar--marker-chart-tab = Marker Chart
 TabBar--marker-table-tab = Marker Table
+TabBar--flame-scope-tab = Flame Scope
 TabBar--network-tab = Network
 TabBar--js-tracer-tab = JS Tracer
 

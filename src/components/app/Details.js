@@ -14,6 +14,7 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { ProfileCallTreeView } from 'firefox-profiler/components/calltree/ProfileCallTreeView';
 import { MarkerTable } from 'firefox-profiler/components/marker-table';
 import { StackChart } from 'firefox-profiler/components/stack-chart/';
+import { FlameScope } from 'firefox-profiler/components/flame-scope/';
 import { MarkerChart } from 'firefox-profiler/components/marker-chart/';
 import { NetworkChart } from 'firefox-profiler/components/network-chart/';
 import { FlameGraph } from 'firefox-profiler/components/flame-graph/';
@@ -114,6 +115,7 @@ class ProfileViewerImpl extends PureComponent<Props> {
               {
                 calltree: <ProfileCallTreeView />,
                 'flame-graph': <FlameGraph />,
+                'flame-scope': <FlameScope />,
                 'stack-chart': <StackChart />,
                 'marker-chart': <MarkerChart />,
                 'marker-table': <MarkerTable />,

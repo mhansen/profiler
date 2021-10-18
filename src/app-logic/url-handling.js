@@ -376,6 +376,7 @@ export function getQueryStringFromUrlState(urlState: UrlState): string {
   switch (selectedTab) {
     case 'stack-chart':
     case 'flame-graph':
+    case 'flame-scope':
     case 'calltree': {
       if (selectedTab === 'stack-chart') {
         // Stack chart uses all of the CallTree's query strings but also has an

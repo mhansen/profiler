@@ -28,6 +28,9 @@ jest.mock('../../components/flame-graph', () => ({
 jest.mock('../../components/stack-chart', () => ({
   StackChart: 'stack-chart',
 }));
+jest.mock('../../components/flame-scope', () => ({
+  FlameScope: 'flame-scope',
+}));
 jest.mock('../../components/marker-chart', () => ({
   MarkerChart: 'marker-chart',
 }));
@@ -45,7 +48,7 @@ describe('app/Details', function () {
   function setup() {
     const { profile } = getProfileFromTextSamples(`
       A  A  A
-      B  B  B
+        B  B
       C  C  H
       D  F  I
       E  E

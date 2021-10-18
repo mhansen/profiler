@@ -19,6 +19,7 @@ export function selectSidebar(
     calltree: CallTreeSidebar,
     'flame-graph': CallTreeSidebar,
     'stack-chart': null,
+    'flame-scope': null,
     'marker-chart': null,
     'marker-table': MarkerSidebar, // MarkerSidebar
     'network-chart': null,

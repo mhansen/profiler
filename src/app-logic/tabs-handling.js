@@ -13,6 +13,7 @@ export const tabsWithTitleL10nId = {
   calltree: 'TabBar--calltree-tab',
   'flame-graph': 'TabBar--flame-graph-tab',
   'stack-chart': 'TabBar--stack-chart-tab',
+  'flame-scope': 'TabBar--flame-scope-tab',
   'marker-chart': 'TabBar--marker-chart-tab',
   'marker-table': 'TabBar--marker-table-tab',
   'network-chart': 'TabBar--network-tab',
