@@ -50,7 +50,7 @@ class FlameScopeEmptyReasonsImpl extends PureComponent<Props> {
   }
 }
 
-export const StackChartEmptyReasons = explicitConnect<{||}, StateProps, {||}>({
+export const FlameScopeEmptyReasons = explicitConnect<{||}, StateProps, {||}>({
   mapStateToProps: (state: State) => ({
     threadName: selectedThreadSelectors.getFriendlyThreadName(state),
     thread: selectedThreadSelectors.getThread(state),

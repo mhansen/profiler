@@ -24,7 +24,7 @@ import {
   getSelectedThreadsKey,
 } from '../../selectors/url-state';
 import { getTimelineMarginLeft } from '../../selectors/app';
-import { StackChartEmptyReasons } from './StackChartEmptyReasons';
+import { FlameScopeEmptyReasons } from './FlameScopeEmptyReasons';
 import { ContextMenuTrigger } from '../shared/ContextMenuTrigger';
 import { StackSettings } from '../shared/StackSettings';
 import { TransformNavigator } from '../shared/TransformNavigator';
